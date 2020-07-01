@@ -1,5 +1,9 @@
 # nativeto
 
+Website lives [here](https://nativeto.netlify.app/) :rocket:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6691bea0-2ed1-469e-80f9-fe954d2d08a9/deploy-status)](https://app.netlify.com/sites/nativeto/deploys)
+
 ## Build Setup
 
 ```bash
