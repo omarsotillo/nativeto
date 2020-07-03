@@ -6211,10 +6211,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nativefier@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/nativefier/-/nativefier-9.0.0.tgz#cbde6b5734a461ba43854af7fcc97f3be69a7cff"
-  integrity sha512-XaS5a4n1FflZSu8UgwqJWikQCWv0xX4ASmtupnE6D5Y1rVJZ1ngFWCOoPgyMwAQrWrqpGTekIa5HK2HsDdCpGg==
+nativefier@^8.0.0:
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/nativefier/-/nativefier-8.0.7.tgz#b52957f0c55bd2619e6970c34bc73c22e5ebf09c"
+  integrity sha512-pc/xqmK4Ez1GmwPe5oDBrgm7x5SXNahKjNKpZWFFPq1vsm2ORJkJfIpbmyGHVPFU79o2QUFdAClZaTkAG36FrQ==
   dependencies:
     "@types/cheerio" "0.x"
     "@types/electron-packager" "14.x"
