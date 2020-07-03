@@ -7,17 +7,17 @@
       <button
         class="flex-1 bg-gray-100 hover:bg-gray-200 rounded-full p-8 mr-4"
       >
-        <img src="../../assets/images/linux.svg" alt="" />
+        <img src="@/assets/images/linux.svg" alt="" />
       </button>
       <button
         class="flex-1 bg-gray-100 hover:bg-gray-200 rounded-full p-8 mr-4"
       >
-        <img src="../../assets/images/apple.svg" alt="" />
+        <img src="@/assets/images/apple.svg" alt="" />
       </button>
       <button
         class="flex-1 bg-gray-100 hover:bg-gray-200 rounded-full p-8 mr-4"
       >
-        <img src="../../assets/images/windows.svg" alt="" />
+        <img src="@/assets/images/windows.svg" alt="" />
       </button>
     </div>
   </div>

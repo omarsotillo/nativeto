@@ -14,7 +14,7 @@
     />
     <img
       class="max-w-lg w-full my-auto justify-center"
-      src="../assets/images/humanity.png"
+      src="@/assets/images/humanity.png"
       alt="humanity"
     />
     <button
