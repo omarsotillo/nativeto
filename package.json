@@ -1,26 +1,66 @@
 {
   "name": "nativeto",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "export": "nuxt-ts export",
-    "serve": "nuxt-ts serve"
-  },
+  "contributors": [
+    {
+      "name": "Omar Sotillo",
+      "email": "omarsotillofranco@gmail.com"
+    }
+  ],
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nativefier": "^8.0.0",
-    "nuxt": "^2.13.0"
+    "nativefier": "^9.0.0",
+    "nuxt": "^2.13.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
     "@nuxt/typescript-build": "^1.0.3",
     "@nuxtjs/tailwindcss": "^2.0.0",
+    "ci-publish": "latest",
+    "conventional-github-releaser": "latest",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "finepack": "latest",
+    "git-authors-cli": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "npm-check-updates": "latest",
+    "prettier": "^2.0.5",
+    "standard-version": "latest"
+  },
+  "scripts": {
+    "build": "nuxt-ts build",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "dev": "nuxt",
+    "export": "nuxt-ts export",
+    "postrelease": "npm run release:tags && npm run release:github && ci-publish",
+    "prerelease": "npm run update:check && npm run contributors",
+    "release": "standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin HEAD:master",
+    "serve": "nuxt-ts serve",
+    "start": "nuxt-ts start",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
+  },
+  "private": true,
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "package.json": [
+      "finepack"
+    ]
   }
 }
