@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/omarsotillo/nativeto/compare/v1.1.1...v1.1.2) (2020-07-04)
+
+
+### Bug Fixes
+
+* adds tool versions and yarn.lock ([a7b2c38](https://github.com/omarsotillo/nativeto/commit/a7b2c38df3372ed369d63d185455a527b5f486e6))
+
 ### [1.1.1](https://github.com/omarsotillo/nativeto/compare/v1.1.0...v1.1.1) (2020-07-04)
 
 
