@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/omarsotillo/nativeto/compare/v1.1.0...v1.1.1) (2020-07-04)
+
+
+### Bug Fixes
+
+* degrade version from conventional-github-releaser ([900a09b](https://github.com/omarsotillo/nativeto/commit/900a09b0155fd92e5aebae976fc3a75677b65ad3))
+
 ## 1.1.0 (2020-07-04)
 
 
