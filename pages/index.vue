@@ -1,8 +1,15 @@
 <template>
   <div class="flex flex-row bg-white h-screen">
-    <left-panel />
-    <right-panel />
-    <modal />
+    <left-panel
+      :target-url.sync="options.targetUrl"
+      v-on:convert-confirm="modalShow = true"
+    />
+    <right-panel :options.sync="options" />
+    <confirm-request-modal
+      :options="options"
+      :modal-show.sync="modalShow"
+      v-on:convert="convert"
+    />
   </div>
 </template>
 
@@ -17,6 +24,35 @@ export default Vue.extend({
     RightPanel,
     LeftPanel,
     ConfirmRequestModal,
+  },
+
+  data: () => {
+    return {
+      modalShow: false,
+      options: {
+        targetUrl: 'https://okubi.co',
+        platform: 'osx',
+        appName: 'okubi.co',
+        appVersion: '0.0.1',
+        width: 1280,
+        maxWidth: 0,
+        minWidth: 0,
+        height: 800,
+        maxHeight: 0,
+        minHeight: 0,
+        showMenuBar: true,
+        fullScreen: false,
+        fastQuit: false,
+        maximize: false,
+      },
+    }
+  },
+
+  methods: {
+    convert(): void {
+      console.log(this.options)
+      this.modalShow = false
+    },
   },
 })
 </script>

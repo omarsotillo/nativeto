@@ -4,38 +4,54 @@
       <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0 text-center">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="show-menu-bar"
         >
           Show menu bar?
         </label>
-        <input class="mr-2 leading-tight" type="checkbox" />
+        <input
+          class="mr-2 leading-tight"
+          type="checkbox"
+          v-model="options.showMenuBar"
+        />
       </div>
       <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0 text-center">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="full-screen"
         >
           Full screen?
         </label>
-        <input class="mr-2 leading-tight" type="checkbox" />
+        <input
+          class="mr-2 leading-tight"
+          type="checkbox"
+          v-model="options.fullScreen"
+        />
       </div>
       <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0 text-center">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="fast-quit"
         >
           Fast quit?
         </label>
-        <input class="mr-2 leading-tight" type="checkbox" />
+        <input
+          class="mr-2 leading-tight"
+          type="checkbox"
+          v-model="options.fastQuit"
+        />
       </div>
       <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0 text-center">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="maximize"
         >
           Maximize?
         </label>
-        <input class="mr-2 leading-tight" type="checkbox" />
+        <input
+          class="mr-2 leading-tight"
+          type="checkbox"
+          v-model="options.maximize"
+        />
       </div>
     </div>
   </form>
@@ -45,6 +61,9 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'extra-options',
+  props: {
+    options: Object,
+  },
 })
 </script>
 <!--

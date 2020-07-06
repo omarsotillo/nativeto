@@ -10,7 +10,7 @@
     <input
       class="bg-white focus:outline-none mt-10 focus:shadow-outline text-black border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
       type="text"
-      placeholder="https://okubi.co"
+      v-model="proxyTargetUrl"
     />
     <img
       class="max-w-lg w-full my-auto justify-center"
@@ -19,6 +19,7 @@
     />
     <button
       class="bg-white hover:bg-gray-100 mb-10 text-gray-800 font-semibold py-2 px-1 border border-gray-400 rounded shadow"
+      @click="$emit('convert-confirm')"
     >
       Start converting
     </button>
@@ -27,5 +28,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+export default Vue.extend({
+  props: {
+    targetUrl: String,
+  },
+  computed: {
+    proxyTargetUrl: {
+      get(): string {
+        return this.targetUrl
+      },
+      set(newValue: string) {
+        this.$emit('update:targetUrl', newValue)
+      },
+    },
+  },
+})
 </script>
