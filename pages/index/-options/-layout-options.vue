@@ -4,45 +4,45 @@
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="width"
         >
           Width
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="text"
-          placeholder="1280 px"
+          class="appearance-none block w-full text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="width"
+          type="number"
+          v-model="options.width"
         />
       </div>
 
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="max-width"
         >
           Max-width
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="text"
-          placeholder="0 px"
+          class="appearance-none block w-full text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="max-width"
+          type="number"
+          v-model="options.maxWidth"
         />
       </div>
 
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="min-width"
         >
           Min-width
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="text"
-          placeholder="0 px"
+          class="appearance-none block w-full text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="min-width"
+          type="number"
+          v-model="options.minWidth"
         />
       </div>
     </div>
@@ -50,45 +50,45 @@
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="height"
         >
           Height
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="text"
-          placeholder="1280 px"
+          class="appearance-none block w-full text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="height"
+          type="number"
+          v-model="options.height"
         />
       </div>
 
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="max-height"
         >
           Max-height
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="text"
-          placeholder="0 px"
+          class="appearance-none block w-full text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="max-height"
+          type="number"
+          v-model="options.maxHeight"
         />
       </div>
 
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-city"
+          for="min-height"
         >
           Min-height
         </label>
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-          id="grid-city"
-          type="text"
-          placeholder="0 px"
+          class="appearance-none block w-full text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="min-height"
+          type="number"
+          v-model="options.minHeight"
         />
       </div>
     </div>
@@ -99,6 +99,9 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'app-options',
+  props: {
+    options: Object,
+  },
 })
 </script>
 <!--

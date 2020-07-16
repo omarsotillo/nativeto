@@ -1,9 +1,9 @@
 <template>
   <section class="overflow-auto flex flex-col w-full">
-    <platform-options />
-    <app-options />
-    <layout-options />
-    <extra-options />
+    <platform-options :platform.sync="options.platform" />
+    <app-options :options.sync="options" />
+    <layout-options :options.sync="options" />
+    <extra-options :options.sync="options" />
   </section>
 </template>
 
@@ -17,5 +17,6 @@ import ExtraOptions from './-options/-extra-options.vue'
 export default Vue.extend({
   name: 'right-panel',
   components: { PlatformOptions, AppOptions, LayoutOptions, ExtraOptions },
+  props: ['options'],
 })
 </script>
