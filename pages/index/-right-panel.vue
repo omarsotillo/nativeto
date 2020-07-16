@@ -1,9 +1,9 @@
 <template>
-  <section class="overflow-auto flex flex-col w-full">
-    <platform-options :platform.sync="options.platform" />
-    <app-options :options.sync="options" />
-    <layout-options :options.sync="options" />
-    <extra-options :options.sync="options" />
+  <section class="overflow-auto flex flex-col w-full justify-center">
+    <platform-options class="mb-10" :platform.sync="options.platform" />
+    <app-options class="mb-10" :options.sync="options" />
+    <extra-options class="mb-10" :options.sync="options" />
+    <layout-options class="mb-10" :options.sync="options" />
   </section>
 </template>
 

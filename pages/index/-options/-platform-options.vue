@@ -1,17 +1,20 @@
 <template>
-  <div class="mx-auto">
-    <h2 class="mt-8 font-bold text-3xl">
-      Which system is your target? 🎯
+  <div class="mx-auto max-w-lg bg-gray-100 rounded shadow p-5 mt-5 w-full">
+    <h2 class="uppercase tracking-wide text-gray-800 text-xs font-bold mb-2">
+      Target system
     </h2>
-    <div id="platform-options" class="flex content-center w-full mt-3">
+    <div
+      id="platform-options"
+      class="flex flex-wrap content-center w-full mt-3 justify-center"
+    >
       <button
-        class="flex-1 bg-gray-100 hover:bg-gray-200 rounded-full p-8 mr-4"
-        :class="{ border: platform.selected }"
+        class="bg-white rounded-full shadow p-5 mr-4"
+        :class="{ 'bg-gray-300': platform.selected }"
         v-for="platform in platforms"
         v-bind:key="platform.key"
         @click="choosePlatform(platform.key)"
       >
-        <img :src="getImageUrl(platform.src)" alt="" />
+        <img :src="getImageUrl(platform.src)" alt="platform" width="40vw" />
       </button>
     </div>
   </div>
