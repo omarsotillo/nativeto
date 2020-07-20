@@ -10,6 +10,7 @@
     <input
       class="bg-white focus:outline-none mt-10 focus:shadow-outline text-black border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
       type="text"
+      placeholder="Website URL"
       v-model="proxyTargetUrl"
     />
     <img

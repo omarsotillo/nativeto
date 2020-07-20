@@ -10,11 +10,13 @@
       :modal-show.sync="modalShow"
       v-on:convert="convert"
     />
+    <p>{{ url }}</p>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import '@nuxtjs/axios'
 import RightPanel from './index/-right-panel.vue'
 import LeftPanel from './index/-left-panel.vue'
 import ConfirmRequestModal from './index/-confirm-request-modal.vue'
@@ -28,6 +30,7 @@ export default Vue.extend({
 
   data: () => {
     return {
+      url: '',
       modalShow: false,
       options: {
         targetUrl: 'https://okubi.co',
@@ -49,8 +52,19 @@ export default Vue.extend({
   },
 
   methods: {
-    convert(): void {
-      console.log(this.options)
+    async convert() {
+      // TODO: Handle error
+      // With breadcrumb -> open issue in github with the error message.
+      const response = await this.$axios.$post(
+        '/.netlify/functions/nativeto',
+        this.options,
+        { responseType: 'arraybuffer' }
+      )
+      let blob = new Blob([response], { type: 'octet/stream' })
+      let link = document.createElement('a')
+      link.href = window.URL.createObjectURL(blob)
+      link.download = this.options.appName + '.zip'
+      link.click()
       this.modalShow = false
     },
   },

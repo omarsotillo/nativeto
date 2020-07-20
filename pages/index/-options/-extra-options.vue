@@ -1,12 +1,12 @@
 <template>
-  <form class="mx-auto max-w-lg bg-gray-100 rounded shadow p-5 mt-5">
+  <form class="mx-auto max-w-lg bg-gray-100 rounded shadow p-5 mt-5 w-full">
     <div class="flex flex-wrap mb-2">
       <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0 text-center">
         <label
           class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           for="show-menu-bar"
         >
-          Show menu bar?
+          Menu bar?
         </label>
         <input
           class="mr-2 leading-tight"

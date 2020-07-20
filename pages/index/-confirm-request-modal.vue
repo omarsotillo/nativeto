@@ -28,7 +28,7 @@
       To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
   -->
     <div
-      class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full"
+      class="bg-white rounded-lg overflow-auto shadow-xl transform transition-all sm:max-w-2xl sm:w-full max-h-screen"
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-headline"
@@ -52,24 +52,25 @@
               />
             </svg>
           </div>
-          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+          <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
             <h3
               class="text-lg leading-6 font-medium text-gray-900"
               id="modal-headline"
             >
               Start converting? 🤔
             </h3>
-            <div class="mt-2">
-              <p class="text-sm leading-5 text-gray-800 mb-5">
-                This is what you have chosen so far:
-              </p>
-              <p
-                class="text-sm leading-5 mb-1 text-gray-600"
+            <p class="text-sm leading-5 text-gray-800 mb-5">
+              This is what you have chosen so far:
+            </p>
+            <div class="flex flex-wrap">
+              <div
+                class="text-center flex flex-col text-sm leading-5 mb-2 text-gray-600 rounded bg-gray-100 mr-5 p-3 shadow"
                 v-for="(value, name) in options"
                 :key="name"
               >
-                <span class="text-gray-700">{{ name }}: </span>{{ value }}
-              </p>
+                <span class="text-md text-gray-800 capitalize">{{ name }} </span
+                >{{ value }}
+              </div>
             </div>
           </div>
         </div>
