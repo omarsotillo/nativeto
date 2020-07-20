@@ -2,6 +2,8 @@
 ### Node template
 # Logs
 /logs
+/tmp
+
 *.log
 *.zip
 npm-debug.log*
