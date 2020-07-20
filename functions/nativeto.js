@@ -1,15 +1,19 @@
 var nativefier = require('nativefier').default
 var archiver = require('archiver')
+var os = require('os')
 var fs = require('fs')
 
 exports.handler = function (event, context, callback) {
   const options = JSON.parse(event.body)
-  nativefier({ ...options, ...{ out: './tmp' } }, function (error, appPath) {
+  nativefier({ ...options, ...{ out: os.tmpdir() } }, function (
+    error,
+    appPath
+  ) {
     if (error) {
       console.error(error)
       return
     }
-    const fileName = './tmp/' + options.appName + '.zip'
+    const fileName = os.tmpdir() + options.appName + '.zip'
     const fileOutput = fs.createWriteStream(fileName)
     const archive = archiver('zip')
 
