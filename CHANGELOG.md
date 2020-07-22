@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/omarsotillo/nativeto/compare/v1.1.5...v1.2.0) (2020-07-22)
+
+
+### Features
+
+* adds data to all components pair with parent index ([fad94b3](https://github.com/omarsotillo/nativeto/commit/fad94b3ec011b334f0ebfd0fba7478e0166b1617))
+* modal completed ([7586e2d](https://github.com/omarsotillo/nativeto/commit/7586e2d37fcc51e2de0fcc9691a6628c8f04f2bc))
+* nativeto function completed ([ee2f8b7](https://github.com/omarsotillo/nativeto/commit/ee2f8b730d07d377eb68ca26fc30eed28e30e33f))
+
+
+### Bug Fixes
+
+* moves to tmp folder generated files ([070ff9b](https://github.com/omarsotillo/nativeto/commit/070ff9b4203190755e2e447d3e65653f0db4e967))
+* tmp migrated to ./tmp ([f8c8fc1](https://github.com/omarsotillo/nativeto/commit/f8c8fc1d9d56d1958ba9207b20ff4edab741dac8))
+
 ### [1.1.5](https://github.com/omarsotillo/nativeto/compare/v1.1.4...v1.1.5) (2020-07-04)
 
 ### [1.1.4](https://github.com/omarsotillo/nativeto/compare/v1.1.3...v1.1.4) (2020-07-04)
